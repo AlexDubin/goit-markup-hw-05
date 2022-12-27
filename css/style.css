@@ -7,6 +7,8 @@
   --corn-text-color: #e7e9fc;
   --card-set-gap-left: 24px;
   --card-set-gap-top: 48px;
+  --time-animation: 250ms;
+  --cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -90,7 +92,7 @@ box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
   line-height: 1.5;
   text-decoration: none;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--time-animation) var(--cubic-bezier);
 }
 
 
@@ -120,7 +122,7 @@ box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
   background-color: var(--accent-color);
   border-radius: 2px;
   opacity: 1;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity var(--time-animation) var(--cubic-bezier);
 }
 
 
@@ -149,7 +151,7 @@ box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
   background-color: var(--accent-color);
   border-radius: 2px;
   opacity: 0;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity var(--time-animation) var(--cubic-bezier);
 }
 
 
@@ -159,7 +161,7 @@ box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
   display: flex;
   margin-left: auto;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--time-animation) var(--cubic-bezier);
 }
 
 .mail-tel .item + .item {
@@ -242,7 +244,7 @@ box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
   text-align: center;
   border-width: 0px;
 
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow  var(--time-animation) var(--cubic-bezier);
   
   
 }
@@ -429,7 +431,7 @@ display: flex;
   border: 1px solid #8E8F99;
   border-radius: 4px;
 
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border var(--time-animation) var(--cubic-bezier);
   
   
 }
@@ -437,7 +439,7 @@ display: flex;
 .clients-icons {
   fill: #8E8F99;
 
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill  var(--time-animation) var(--cubic-bezier);
   }
 
 
@@ -481,11 +483,11 @@ display: flex;
   text-align: center;
   min-width: 69px;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
-  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
-  box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), 
-  border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1), 
-  border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--time-animation) var(--cubic-bezier), 
+  background-color var(--time-animation) var(--cubic-bezier), 
+  box-shadow var(--time-animation) var(--cubic-bezier), 
+  border-radius var(--time-animation) var(--cubic-bezier), 
+  border var(--time-animation) var(--cubic-bezier);
 }
 
 .button-portfolio:hover,
@@ -550,8 +552,8 @@ display: flex;
 
   transform: translateY(100%);
 
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), 
-  opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--time-animation) var(--cubic-bezier), 
+  opacity var(--time-animation) var(--cubic-bezier);
 
 }
 
@@ -573,8 +575,8 @@ display: flex;
   transform: translateY(100%);
   
 
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), 
-  opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--time-animation) var(--cubic-bezier), 
+  opacity var(--time-animation) var(--cubic-bezier);
 
   
   
@@ -614,8 +616,8 @@ display: flex;
   border: 0.5px solid #F4F4FD;
 box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 
-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), 
-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+transition: border var(--time-animation) var(--cubic-bezier), 
+box-shadow var(--time-animation) var(--cubic-bezier);
 }
 
 .list-border:hover,
@@ -721,7 +723,7 @@ display: flex;
   height: 40px;
   border-radius: 50%; 
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color  var(--time-animation) var(--cubic-bezier);
     
 }
 
@@ -795,11 +797,20 @@ display: flex;
   width: 100%;
   height: 100%;
   background-color: rgba(46, 47, 66, 0.4);
+
+
+
+  transition: transform var(--time-animation) var(--cubic-bezier), 
+  opacity var(--time-animation) var(--cubic-bezier);
 }
 
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
+
+  
+
+  
 }
 
 
@@ -817,6 +828,9 @@ display: flex;
   background-color: #FCFCFC;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;  
+
+  opacity: 1;
+  
 }
 
 
@@ -841,7 +855,7 @@ display: flex;
    background-repeat: no-repeat;
    background-position: 50% 50%;
 
-   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   transition: box-shadow var(--time-animation) var(--cubic-bezier);
 
    
 }
